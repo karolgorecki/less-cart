@@ -1,2 +1,137 @@
+/*  Some general styling not important
+  ================================================== */
+
+html, body {
+  	margin:0 auto;
+  	padding:0;
+}
+
 body {
+	background-color: #c0c0c0;
+}
+
+.alpha {
+	font:bold italic 24px 'Myriad Pro',arial;
+	margin: 0;
+	padding: 0;
+
+	&.main-heading {
+		color: #222;
+		text-shadow:1px 1px 0 #fff;
+		margin: 10px 0 10px 20px;
+		border-bottom: 1px solid #fff;
+	}
+}
+
+#cart-button {
+	margin: 0 auto;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+}
+
+/*  Add custom namespace for the popup cart module
+  ================================================== */
+
+
+// my ref http://jsfiddle.net/cX33k/
+
+#cart-button-popup {
+
+	// start variables declaration
+	@cart-button-bg: #2be;
+
+	// end variables
+	.init() {
+		position:relative;
+		height: 40px;
+		background-color: @cart-button-bg;
+
+		.inner {
+			display: none;
+			position: absolute;
+			width: 500px;
+			background-color: #F00;
+			padding: 50px;
+			bottom:0;
+			right: 0;
+
+			.main-box {
+
+				border: 1px solid #333;
+			}
+		}
+
+		// start hover action
+		&:hover {
+			// action for cart button goes here
+		}
+
+		&:hover .inner {
+			display: block;
+		}
+	}
+}
+
+/*  Append class to the sample button - Example of use
+  ================================================== */
+
+  .cart-module {
+  	#cart-button-popup > .init;
+  }
+
+
+  /*  TESTING ONLY
+    ================================================== */
+    body {
+ margin:0 auto;
+text-align:center;    
+}
+.cart-container {
+    width:100px;
+    margin:0 auto;
+    text-align:center;
+    line-height:20px;
+    height:20px;
+    background:#2be;
+    position:relative;
+}
+
+.inner-box {
+ width:500px;   
+ position:absolute;
+ bototm:0;
+ right:0;
+ padding-top:20px;
+
+    
+}
+
+.cart-container:hover .inner-box {
+	display: block;
+}
+
+.cart-container:hover .main-box {
+ 
+}
+
+.main-box {
+    -moz-transition: all 3s;
+ border:1px solid #333;   
+    border-radius: 7px;
+    padding:10px;
+    box-shadow:0 5px 10px #555;
+    opacity:0;
+    height:0;
+}
+
+.main-box:after {
+ display:block;
+position:absolute;
+content: "";
+    border-bottom:10px solid #333;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    top:10px;
+    right:35px;
 }
