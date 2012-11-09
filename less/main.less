@@ -36,12 +36,21 @@ body {
 
 // my ref http://jsfiddle.net/cX33k/
 
+
+// !!!!! TODO configurable options!
 #cart-button-popup {
 
 	// start variables declaration
 	@cart-button-bg: #2be;
+	@inner-top-offset: 20px;
+	@arrow-size: 12px;
+	@arrow-right-offset: 50px;
 
 	// end variables
+
+
+	// end mixin
+
 	.init() {
 		position:relative;
 		height: 40px;
@@ -51,14 +60,23 @@ body {
 			display: none;
 			position: absolute;
 			width: 500px;
-			background-color: #F00;
-			padding: 50px;
-			bottom:0;
+			padding-top: @inner-top-offset;
 			right: 0;
 
 			.main-box {
+				padding: 20px;
+				border: 1px solid #000;
+				background-color: #FFF;
 
-				border: 1px solid #333;
+				&:after {
+					top: @inner-top-offset - @arrow-size * 2 + 1;
+					right: @arrow-right-offset; // - @arrow-size center the offset
+					position: absolute;
+					display: block;
+					content: '';
+					border:@arrow-size solid transparent;
+					border-bottom-color:#fff;
+				}
 			}
 		}
 
@@ -83,6 +101,7 @@ body {
 
   /*  TESTING ONLY
     ================================================== */
+    /*
     body {
  margin:0 auto;
 text-align:center;    
@@ -134,3 +153,5 @@ content: "";
     top:10px;
     right:35px;
 }
+
+*/
