@@ -46,6 +46,8 @@ body {
 	@arrow-size: 12px;
 	@arrow-right-offset: 50px;
 
+	@main-box-radius: 7px;
+
 	// end variables
 
 
@@ -67,6 +69,7 @@ body {
 				padding: 20px;
 				border: 1px solid #000;
 				background-color: #FFF;
+				border-radius: @main-box-radius;
 
 				&:after {
 					top: @inner-top-offset - @arrow-size * 2 + 1;
