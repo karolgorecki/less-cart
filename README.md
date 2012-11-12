@@ -14,25 +14,25 @@
 
 ## Variables 
 ### Color
-* @cart-button-bg
-* @main-box-border-color
-* @main-box-bg
-* @button-bg
-* @price-color
+* @cart-button-bg - defines the background color of the cart button
+* @main-box-border-color - defines the border color of the popup body
+* @main-box-bg - defines the background color of the popup body
+* @button-bg - defines the color of background checkout button
+* @price-color - defines the color of the item prices
 
 ### Aligment
-* @align
+* @align - defines the aligment of the popup body (left/right)
 
 ### Sizes
-* @inner-width
-* @arrow-size
-* @item-size
+* @inner-width - defines the width of the popup body
+* @arrow-size - defines the arrow size
+* @item-size - defines the image size and single item row
 
 ### Arrow position
-* @inner-top-offset
-* @arrow-x-offset
+* @inner-top-offset - defines the gap between cart button and the body
+* @arrow-x-offset - defines the arrow position on the x axis
 
 ### Main box
-* @main-box-border
-* @main-box-radius
-* @main-box-shadow
+* @main-box-border - definition for main box border
+* @main-box-radius - definition for the border radius
+* @main-box-shadow - definition for box shadow
