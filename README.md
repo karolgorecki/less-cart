@@ -4,7 +4,7 @@
 ![cart look](https://raw.github.com/karolgorecki/less-cart/master/assets/cart-icon.png)
 
 ### how it looks:
-![cart real look](https://raw.github.com/karolgorecki/less-cart/master/assets/cart-icon-css.png)
+![cart real look](https://raw.github.com/karolgorecki/less-cart/master/assets/cart-icon-css-blueish.png)
 
 # Configuration options
 * popup align to left/right side
