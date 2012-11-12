@@ -13,7 +13,7 @@
 * arrow size/position
 
 ## Variables 
-Color
+### Color
 * @cart-button-bg: #a4d510;
 * @main-box-border-color: #999;
 * @main-box-bg: #fff;
