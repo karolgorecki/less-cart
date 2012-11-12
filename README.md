@@ -27,3 +27,12 @@
 * @inner-width
 * @arrow-size
 * @item-size
+
+### Arrow position
+* @inner-top-offset
+* @arrow-x-offset
+
+### Main box
+* @main-box-border
+* @main-box-radius
+* @main-box-shadow
