@@ -40,7 +40,7 @@
 # How to use
 
 ### html source
-``` html
+```html
 <div class="cart-module">
 	<span class="cart-button-text">My cart (1)</span>
 	<div class="inner">
@@ -74,7 +74,7 @@
 ```
 
 ### css source
-``` css
+```css
 /* call the init on the cart module*/
 .cart-module {
 	#cart-button-popup > .init;
