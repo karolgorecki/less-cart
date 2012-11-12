@@ -50,19 +50,24 @@ body {
 
 	// start variables declaration
 	@cart-button-bg: #a4d510;
+	@main-box-border-color: #999;
+	@main-box-bg: #fff;
+	@button-bg: #a4d510;
+	@price-color: @button-bg;
+
 	@align: left;
-	@inner-top-offset: 20px;
+	
 	@inner-width: 500px;
 	@arrow-size: 15px;
+	@item-size: 32px;
+
+	@inner-top-offset: 20px;
 	@arrow-x-offset: 100px;
-	@main-box-border-color: #999;
+	
 	@main-box-border: 1px solid @main-box-border-color;
 	@main-box-radius: 7px;
 	@main-box-shadow: 0 7px 10px rgba(0,0,0,.35);
-	@main-box-bg: #fff;
-	@item-size: 32px;
-	@button-bg: #a4d510;
-	@price-color: @button-bg;
+	
 	// end variables
 
 	//start mixins
@@ -90,6 +95,7 @@ body {
 		#gradient > .vertical(#333333,#666666);
 
 	}
+
 	// end mixin
 
 	.init() {
@@ -290,6 +296,8 @@ body {
 					// .transition(opacity .3s linear);
 					// .transition(margin .3s linear);
 					transition: margin .3s linear, opacity .25s ease-in;
+					-moz-transition: margin .3s linear, opacity .25s ease-in;
+					-webkit-transition: margin .3s linear, opacity .25s ease-in;
 					color: #fff;
 					text-align: center;
 					.cart-gradient;
