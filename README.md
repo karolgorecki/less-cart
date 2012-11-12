@@ -67,7 +67,6 @@
 		<!-- call2action buttons -->
 		<div class="buttons">
 			<a href="#" class="checkout-link">Go to Checkout</a>
-
 			<a href="#" class="cart-link">Go to Cart</a>
 		</div>
 	</div>
