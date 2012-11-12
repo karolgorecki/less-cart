@@ -17,9 +17,9 @@
 * @main-box-border-color: #999;
 * @main-box-bg: #fff;
 * @button-bg: #a4d510;
-* @price-color: @button-bg;
+* @price-color: @button-bg;  
 
-* @align: left;
+* @align: left;  
 
 * @inner-width: 500px;
 * @arrow-size: 15px;
