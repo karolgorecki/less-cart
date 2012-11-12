@@ -36,3 +36,44 @@
 * @main-box-border - definition for main box border
 * @main-box-radius - definition for the border radius
 * @main-box-shadow - definition for box shadow
+
+# How to use
+
+### html source
+
+	<div class="cart-module">
+		<span class="cart-button-text">My cart (1)</span>
+		<div class="inner">
+			<div class="main-box">
+				<div class="item-box">
+
+				<!-- Single product row -->
+				<div class="item">
+					<a href="#"><img src="http://lorempixum.com/32/32" alt=""></a>
+					<div class="item-name"><a href="#">Some great product</a></div>
+					<div class="price">$59,99</div>
+					<a href="#" title="Remove product" class="remove-item">Remove</a>
+				</div>
+
+				<!-- Total amount -->
+				<div class="total-box">
+					<div class="subtotal">Subtotal: <b>$265,99</b></div>
+					<div class="total">Total: <b>$2505,99</b></div>
+					<div class="grandtotal">Grand total: <b>$2505,99</b></div>
+				</div>
+
+			</div>
+
+			<!-- call2action buttons -->
+			<div class="buttons">
+				<a href="#" class="checkout-link">Go to Checkout</a>
+
+				<a href="#" class="cart-link">Go to Cart</a>
+			</div>
+		</div>
+	</div>
+
+### css source
+	.cart-module {
+		#cart-button-popup > .init;
+	}
