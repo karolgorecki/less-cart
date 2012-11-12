@@ -8,6 +8,8 @@
 
 /*  Some general styling not important
   ================================================== */
+@import 'mixins.less';
+@import 'vars.less';
 
 html, body {
   	margin:0 auto;
@@ -52,10 +54,12 @@ body {
 	@cart-button-bg: #2be;
 	@inner-top-offset: 20px;
 	@arrow-size: 12px;
-	@arrow-right-offset: 50px;
-
+	@arrow-right-offset: 70px;
+	@main-box-border-color: #999;
+	@main-box-border: 1px solid @main-box-border-color;
 	@main-box-radius: 7px;
-
+	@main-box-shadow: 0 7px 10px rgba(0,0,0,.35);
+	@main-box-bg: #fff;
 	// end variables
 
 
@@ -69,15 +73,26 @@ body {
 		.inner {
 			display: none;
 			position: absolute;
-			width: 500px;
+			width: 600px;
 			padding-top: @inner-top-offset;
 			right: 0;
 
 			.main-box {
 				padding: 20px;
-				border: 1px solid #000;
-				background-color: #FFF;
-				border-radius: @main-box-radius;
+				border: @main-box-border;
+				background-color: @main-box-bg;
+				.border-radius(@main-box-radius);
+				.box-shadow(@main-box-shadow);
+
+				&:before {
+					top: @inner-top-offset - @arrow-size * 2 - 1;
+					right: @arrow-right-offset - 1; // - @arrow-size center the offset
+					position: absolute;
+					display: block;
+					content: '';
+					border:@arrow-size + 1 solid transparent;
+					border-bottom-color: @main-box-border-color;
+				}
 
 				&:after {
 					top: @inner-top-offset - @arrow-size * 2 + 1;
@@ -86,7 +101,7 @@ body {
 					display: block;
 					content: '';
 					border:@arrow-size solid transparent;
-					border-bottom-color:#fff;
+					border-bottom-color: @main-box-bg;
 				}
 			}
 		}
@@ -108,61 +123,3 @@ body {
   .cart-module {
   	#cart-button-popup > .init;
   }
-
-
-  /*  TESTING ONLY
-    ================================================== */
-    /*
-    body {
- margin:0 auto;
-text-align:center;    
-}
-.cart-container {
-    width:100px;
-    margin:0 auto;
-    text-align:center;
-    line-height:20px;
-    height:20px;
-    background:#2be;
-    position:relative;
-}
-
-.inner-box {
- width:500px;   
- position:absolute;
-
- right:0;
- padding-top:20px;
-
-    
-}
-
-.cart-container:hover .inner-box {
-	display: block;
-}
-
-.cart-container:hover .main-box {
-	display: block;
-}
-
-.main-box {
-    -moz-transition: all 3s;
- border:1px solid #333;   
-    border-radius: 7px;
-    padding:10px;
-    box-shadow:0 5px 10px #555;
-    display: none;
-}
-
-.main-box:after {
- display:block;
-position:absolute;
-content: "";
-    border-bottom:10px solid #333;
-    border-left:10px solid transparent;
-    border-right:10px solid transparent;
-    top:10px;
-    right:35px;
-}
-
-*/
