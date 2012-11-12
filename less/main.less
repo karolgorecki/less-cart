@@ -117,6 +117,7 @@ body {
 					}
 					img {
 						float: left;
+						border: none;
 						max-width: @item-size;
 						max-height: @item-size;
 						min-width: @item-size;
@@ -177,6 +178,10 @@ body {
 					#gradient > .vertical(#a4d510,#526a08);
 					color: #fff;
 					text-shadow: 0 1px 0 rgba(0,0,0,.3);
+
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 
 				.cart-link {
@@ -192,7 +197,11 @@ body {
 					width: @inner-width/2 - 21;
 					padding: 0 10px;
 					text-shadow: 0 1px 0 rgba(0,0,0,.3);
-				
+
+					&:hover {
+						text-decoration: underline;
+					}
+
 				}
 
 			}
