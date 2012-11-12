@@ -53,7 +53,7 @@ body {
 	@align: left;
 	@inner-top-offset: 20px;
 	@inner-width: 500px;
-	@arrow-size: 12px;
+	@arrow-size: 15px;
 	@arrow-x-offset: 100px;
 	@main-box-border-color: #999;
 	@main-box-border: 1px solid @main-box-border-color;
@@ -83,7 +83,7 @@ body {
 	}
 
 	.checkout-gradient() {
-		#gradient > .vertical(#a4d510,#526a08);
+		#gradient > .vertical(@button-bg,darken(@button-bg,23%));
 	}
 
 	.cart-gradient() {
@@ -99,6 +99,13 @@ body {
 		height: 40px;
 		background-color: @cart-button-bg;
 
+		.cart-button-text {
+				font: bold 14px sans-serif;
+				padding-left: 10px;
+				color: rgba(0,0,0,.7);
+				text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+			}
+
 		// end styling for button cart
 		.inner {
 			display: none;
@@ -107,6 +114,8 @@ body {
 			padding-top: @inner-top-offset;
 
 			.align(@align);
+
+
 
 			.main-box {
 				padding: 20px;
@@ -161,7 +170,7 @@ body {
 						a {
 							font: bold 12px sans-serif;
 							text-decoration: none;
-							color: #555;
+							color: #666;
 
 							&:hover {
 								color: #222;
