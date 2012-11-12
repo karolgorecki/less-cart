@@ -7,13 +7,13 @@
 ===================================================== */
 
 /*  Some general styling not important
-  ================================================== */
+================================================== */
 @import 'mixins.less';
 @import 'vars.less';
 
 html, body {
-  	margin:0 auto;
-  	padding:0;
+	margin:0 auto;
+	padding:0;
 }
 
 body {
@@ -41,18 +41,17 @@ body {
 }
 
 /*  Add custom namespace for the popup cart module
-  ================================================== */
+================================================== */
 
 
 // my ref http://jsfiddle.net/cX33k/
 
-
-// !!!!! TODO configurable options!
 #cart-button-popup {
 
 	// start variables declaration
-	@cart-button-bg: #2be;
+	@cart-button-bg: #a4d510;
 	@inner-top-offset: 20px;
+	@inner-width: 450px;
 	@arrow-size: 12px;
 	@arrow-right-offset: 70px;
 	@main-box-border-color: #999;
@@ -60,20 +59,26 @@ body {
 	@main-box-radius: 7px;
 	@main-box-shadow: 0 7px 10px rgba(0,0,0,.35);
 	@main-box-bg: #fff;
+	@item-size: 32px;
+	@button-bg: #a4d510;
 	// end variables
 
+	//start mixins
 
 	// end mixin
 
 	.init() {
+
+		// styles for the button cart
 		position:relative;
 		height: 40px;
 		background-color: @cart-button-bg;
 
+		// end styling for button cart
 		.inner {
 			display: none;
 			position: absolute;
-			width: 600px;
+			width: @inner-width;
 			padding-top: @inner-top-offset;
 			right: 0;
 
@@ -81,7 +86,7 @@ body {
 				padding: 20px;
 				border: @main-box-border;
 				background-color: @main-box-bg;
-				.border-radius(@main-box-radius);
+				.border-radius(@main-box-radius @main-box-radius 0 0);
 				.box-shadow(@main-box-shadow);
 
 				&:before {
@@ -103,6 +108,93 @@ body {
 					border:@arrow-size solid transparent;
 					border-bottom-color: @main-box-bg;
 				}
+
+				.item {
+					padding: 10px 10px;
+					overflow: hidden;
+					&:hover {
+						background-color: #eee;
+					}
+					img {
+						float: left;
+						max-width: @item-size;
+						max-height: @item-size;
+						min-width: @item-size;
+						min-height: @item-size;
+					}
+
+					border-bottom:1px solid lighten(@main-box-border-color,30%);
+					.item-name {
+						height: @item-size;
+						line-height: @item-size - 2;
+						float: left;
+						margin-left: 10px;
+
+						a {
+							font: bold 12px sans-serif;
+							text-decoration: none;
+							color: #555;
+
+							&:hover {
+								color: #222;
+							}
+						}
+					}
+
+					&:last-child {
+						border-bottom: none;
+
+					}
+				}
+			}
+
+			.buttons {
+				//background-color: @button-bg;
+				overflow: hidden;
+				margin: -1 * @inner-top-offset;
+				margin-top: 0;
+				width: @inner-width - 2;
+				margin: 0 auto;
+				border: @main-box-border;
+				border-top: none;
+				.border-radius(0 0 @main-box-radius @main-box-radius);
+				.box-shadow(@main-box-shadow);
+				text-align: right;
+
+				.checkout-link {
+					text-align: center;
+					background-color: #a4d510;
+					height: 50px;
+					float: right;
+					text-decoration: none;
+					font: bold 16px arial;
+					line-height: 50px;
+					width: @inner-width/2 - 21;
+					padding: 0 10px;
+					//color: darken(@button-bg, 35%);
+					//text-shadow:1px 1px 0 lighten(@button-bg, 35%);
+					#gradient > .vertical(#526a08,#a4d510);
+					#gradient > .vertical(#a4d510,#526a08);
+					color: #fff;
+					text-shadow: 0 1px 0 rgba(0,0,0,.3);
+				}
+
+				.cart-link {
+					color: #fff;
+					text-align: center;
+					#gradient > .vertical(#333333,#666666);
+					background-color: #666;
+					height: 50px;
+					float: left;
+					text-decoration: none;
+					font: bold 16px arial;
+					line-height: 50px;
+					width: @inner-width/2 - 21;
+					padding: 0 10px;
+					text-shadow: 0 1px 0 rgba(0,0,0,.3);
+				
+				}
+
 			}
 		}
 
@@ -115,11 +207,12 @@ body {
 			display: block;
 		}
 	}
+
 }
 
 /*  Append class to the sample button - Example of use
-  ================================================== */
+================================================== */
 
-  .cart-module {
-  	#cart-button-popup > .init;
-  }
+.cart-module {
+	#cart-button-popup > .init;
+}
