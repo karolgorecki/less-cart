@@ -80,3 +80,6 @@
 	#cart-button-popup > .init;
 }
 ```
+
+# TODO
+* check cross-browser
