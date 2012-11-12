@@ -81,6 +81,14 @@ body {
 	.align(right,@arrow-x-offset) {
 		left: @arrow-x-offset;
 	}
+
+	.checkout-gradient() {
+		#gradient > .vertical(#a4d510,#526a08);
+	}
+
+	.cart-gradient() {
+		#gradient > .vertical(#333333,#666666);
+	}
 	// end mixin
 
 	.init() {
@@ -193,7 +201,7 @@ body {
 					border-top: 2px solid @price-color;
 					padding: 10px;
 
-					.subtotal, .total {
+					.subtotal, .total, .grandtotal {
 						margin-left: @item-size + 10 - 70; // minus width of text
 						padding-left: 60%;
 						font: normal 16px sans-serif;
@@ -212,6 +220,14 @@ body {
 							font-size: 24px;
 						}
 
+					}
+
+					.grandtotal {
+						margin-left: @item-size + 10 - 90; // minus width of text
+						margin-top: 0;
+						b {
+							font-size: 24px;
+						}
 					}
 				}
 			}
@@ -239,10 +255,7 @@ body {
 					line-height: 50px;
 					width: @inner-width/2 - 21;
 					padding: 0 10px;
-					//color: darken(@button-bg, 35%);
-					//text-shadow:1px 1px 0 lighten(@button-bg, 35%);
-					#gradient > .vertical(#526a08,#a4d510);
-					#gradient > .vertical(#a4d510,#526a08);
+					.checkout-gradient;
 					color: #fff;
 					text-shadow: 0 1px 0 rgba(0,0,0,.3);
 
@@ -254,8 +267,7 @@ body {
 				.cart-link {
 					color: #fff;
 					text-align: center;
-					#gradient > .vertical(#333333,#666666);
-					background-color: #666;
+					.cart-gradient;
 					height: 50px;
 					float: left;
 					text-decoration: none;
