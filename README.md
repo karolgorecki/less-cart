@@ -76,6 +76,7 @@
 
 ### css source
 ``` css
+/* call the init on the cart module*/
 .cart-module {
 	#cart-button-popup > .init;
 }
