@@ -14,8 +14,16 @@
 
 ## Variables 
 ### Color
-* @cart-button-bg: #a4d510;
-* @main-box-border-color: #999;
-* @main-box-bg: #fff;
-* @button-bg: #a4d510;
-* @price-color: @button-bg;  
+* @cart-button-bg
+* @main-box-border-color
+* @main-box-bg
+* @button-bg
+* @price-color
+
+### Aligment
+* @align
+
+### Sizes
+* @inner-width
+* @arrow-size
+* @item-size
