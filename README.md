@@ -13,21 +13,26 @@
 * arrow size/position
 
 ## Variables 
-* @cart-button-bg: #a4d510;
-* @main-box-border-color: #999;
-* @main-box-bg: #fff;
-* @button-bg: #a4d510;
-* @price-color: @button-bg;
+### Color
+* @cart-button-bg
+* @main-box-border-color
+* @main-box-bg
+* @button-bg
+* @price-color
 
-* @align: left;
+### Aligment
+* @align
 
-* @inner-width: 500px;
-* @arrow-size: 15px;
-* @item-size: 32px;
+### Sizes
+* @inner-width
+* @arrow-size
+* @item-size
 
-* @inner-top-offset: 20px;
-* @arrow-x-offset: 50px;
+### Arrow position
+* @inner-top-offset
+* @arrow-x-offset
 
-* @main-box-border: 1px solid @main-box-border-color;
-* @main-box-radius: 7px;
-* @main-box-shadow: 0 7px 10px rgba(0,0,0,.35);
+### Main box
+* @main-box-border
+* @main-box-radius
+* @main-box-shadow
