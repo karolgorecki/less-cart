@@ -50,10 +50,11 @@ body {
 
 	// start variables declaration
 	@cart-button-bg: #a4d510;
+	@align: left;
 	@inner-top-offset: 20px;
 	@inner-width: 450px;
 	@arrow-size: 12px;
-	@arrow-right-offset: 70px;
+	@arrow-x-offset: 100px;
 	@main-box-border-color: #999;
 	@main-box-border: 1px solid @main-box-border-color;
 	@main-box-radius: 7px;
@@ -61,10 +62,25 @@ body {
 	@main-box-bg: #fff;
 	@item-size: 32px;
 	@button-bg: #a4d510;
+	@price-color: @button-bg;
 	// end variables
 
 	//start mixins
+	.align(left) {
+		right: 0;
+	}
 
+	.align(right) {
+		left: 0;
+	}
+
+	.align(left,@arrow-x-offset) {
+		right: @arrow-x-offset;
+	}
+
+	.align(right,@arrow-x-offset) {
+		left: @arrow-x-offset;
+	}
 	// end mixin
 
 	.init() {
@@ -80,7 +96,8 @@ body {
 			position: absolute;
 			width: @inner-width;
 			padding-top: @inner-top-offset;
-			right: 0;
+
+			.align(@align);
 
 			.main-box {
 				padding: 20px;
@@ -91,7 +108,7 @@ body {
 
 				&:before {
 					top: @inner-top-offset - @arrow-size * 2 - 1;
-					right: @arrow-right-offset - 1; // - @arrow-size center the offset
+					.align(@align,@arrow-x-offset - 1);
 					position: absolute;
 					display: block;
 					content: '';
@@ -101,7 +118,7 @@ body {
 
 				&:after {
 					top: @inner-top-offset - @arrow-size * 2 + 1;
-					right: @arrow-right-offset; // - @arrow-size center the offset
+					.align(@align,@arrow-x-offset);
 					position: absolute;
 					display: block;
 					content: '';
@@ -113,7 +130,7 @@ body {
 					padding: 10px 10px;
 					overflow: hidden;
 					&:hover {
-						background-color: #eee;
+						background-color: #f2f2f2;
 					}
 					img {
 						float: left;
@@ -130,6 +147,7 @@ body {
 						line-height: @item-size - 2;
 						float: left;
 						margin-left: 10px;
+						width: 60%;
 
 						a {
 							font: bold 12px sans-serif;
@@ -142,8 +160,57 @@ body {
 						}
 					}
 
+					.price {
+						color: darken(@price-color,10%);
+						font: bold 15px sans-serif;
+						height: @item-size;
+						line-height: @item-size - 2;
+						float: left;
+					}
+
+					.remove-item {
+						font: 0/0 a;
+						width: 10px;
+						height: 10px;
+						background: url(../assets/remove-icon.png);
+						display: block;
+						margin-top: 11px;
+						float: right;
+
+						&:hover {
+							background-position: 0 100%;
+						}
+					}
+
 					&:last-child {
 						border-bottom: none;
+
+					}
+				}
+
+				.total-box {
+					margin-top: 10px;
+					border-top: 2px solid @price-color;
+					padding: 10px;
+
+					.subtotal, .total {
+						margin-left: @item-size + 10 - 70; // minus width of text
+						padding-left: 60%;
+						font: normal 16px sans-serif;
+						margin-top: 10px;
+						color: darken(@price-color,15%);
+
+						b {
+							font-size: 20px;
+						}
+					}
+
+					.total {
+						margin-left: @item-size + 10 - 45; // minus width of text
+						margin-top: 0;
+						b {
+							font-size: 24px;
+						}
 
 					}
 				}
@@ -156,8 +223,8 @@ body {
 				margin-top: 0;
 				width: @inner-width - 2;
 				margin: 0 auto;
-				border: @main-box-border;
 				border-top: none;
+				border-bottom-color: @main-box-border-color;
 				.border-radius(0 0 @main-box-radius @main-box-radius);
 				.box-shadow(@main-box-shadow);
 				text-align: right;
