@@ -27,6 +27,7 @@
 * @inner-width - defines the width of the popup body
 * @arrow-size - defines the arrow size
 * @item-size - defines the image size and single item row
+* @c2a-button-height - defines the height of the call2action buttons
 
 ### Arrow position
 * @inner-top-offset - defines the gap between cart button and the body
