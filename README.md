@@ -82,4 +82,4 @@
 ```
 
 # TODO
-* check cross-browser
+* working fine on lastest: Chrome, Mozilla, Safari, Opera, IE7+
