@@ -17,6 +17,7 @@
 	@inner-width: 500px;
 	@arrow-size: 15px;
 	@item-size: 32px;
+	@c2a-button-height: 45px;
 
 	@inner-top-offset: 20px;
 	@arrow-x-offset: 50px;
@@ -222,11 +223,11 @@
 					.transition(width .3s linear);
 					text-align: center;
 					background-color: #a4d510;
-					height: 50px;
+					height: @c2a-button-height;
 					float: right;
 					text-decoration: none;
 					font: bold 16px arial;
-					line-height: 50px;
+					line-height: @c2a-button-height;
 					width: @inner-width/2 - 21;
 					padding: 0 10px;
 					.checkout-gradient;
@@ -257,11 +258,11 @@
 					color: #fff;
 					text-align: center;
 					.cart-gradient;
-					height: 50px;
+					height: @c2a-button-height;
 					float: left;
 					text-decoration: none;
 					font: bold 16px arial;
-					line-height: 50px;
+					line-height: @c2a-button-height;
 					width: @inner-width/2 - 21;
 					padding: 0 10px;
 					text-shadow: 0 1px 0 rgba(0,0,0,.3);
