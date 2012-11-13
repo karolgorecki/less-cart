@@ -76,6 +76,9 @@
 			position: absolute;
 			width: @inner-width;
 			padding-top: @inner-top-offset;
+			*background-color: #FFF; //some IE fix
+			*padding-top: 0;
+			*top: 100%;
 			.align(@align);
 
 			.main-box {
