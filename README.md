@@ -80,6 +80,7 @@
 	#cart-button-popup > .init;
 }
 ```
+# Cross-browser
+* working fine on lastest: Chrome, Mozilla, Safari, Opera, IE7+
 
 # TODO
-* working fine on lastest: Chrome, Mozilla, Safari, Opera, IE7+
