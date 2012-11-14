@@ -162,7 +162,7 @@
 
 					.price {
 						color: darken(@price-color,10%);
-						font: bold 15px sans-serif;
+						font: bold 14px sans-serif;
 						height: @item-size;
 						line-height: @item-size - 2;
 						float: left;
@@ -190,37 +190,35 @@
 				.total-box {
 					margin-top: 10px;
 					border-top: 2px solid @price-color;
-					padding: 10px;
+					padding: 20px 10px 10px 10px;
+					overflow: hidden;
 
-					.subtotal, .total, .grandtotal {
-						margin-left: @item-size + 10 - 70; // minus width of text
-						padding-left: 60%;
-						font: normal 16px sans-serif;
-						margin-top: 10px;
-						color: darken(@price-color,15%);
-
-						b {
-							font-size: 20px;
-						}
+					.price-label {
+						font: normal 13px sans-serif;
+						width: 58%;
+						padding-right: 2%;
+						text-align: right;
+						float: left;
+						height: 30px;
+						line-height: 30px;
+						margin-left: @item-size + 15;
+						color: lighten(desaturate(@price-color,60%),10%);
 					}
-
 					.total {
-						margin-left: @item-size + 10 - 45; // minus width of text
-						margin-top: 0;
+						height: 30px;
+						font: bold 16px sans-serif;
+						line-height: 29px;
+						color: darken(@price-color,15%);
+						float: left;
 
-						b {
+
+
+					}
+
+					.grand-total {
 							font-size: 20px;
+							line-height: 28px;
 						}
-					}
-
-					.grandtotal {
-						margin-left: @item-size + 10 - 90; // minus width of text
-						margin-top: 0;
-
-						b {
-							font-size: 24px;
-						}
-					}
 				}
 			}
 
