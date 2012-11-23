@@ -6,6 +6,7 @@
 ### how it looks:
 ![cart real look](https://raw.github.com/karolgorecki/less-cart/master/assets/cart-icon-css.png)
 
+### [working example](http://karolgorecki.github.com/less-cart/)
 # Configuration options
 * popup align to left/right side
 * colors
