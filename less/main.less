@@ -1,0 +1,53 @@
+/* ===================================================
+*
+*	Popup cart module using less
+*	@author <karol.gorecki@o2.pl>
+*	@last-mod 2012-11-13
+*
+===================================================== */
+
+/*  Some general styling not important
+================================================== */
+
+// import mixins and variables
+@import 'mixins.less';
+@import 'vars.less';
+@import 'cart-button-popup.less'; // get the cart btn styling
+
+html, body {
+	margin:0 auto;
+	padding:0;
+}
+
+body {
+	background-color: #aaa;
+}
+
+.alpha {
+	font:bold italic 24px 'Myriad Pro',arial;
+	margin: 0;
+	padding: 0;
+
+	&.main-heading {
+		color: #222;
+		text-shadow:1px 1px 0 #fff;
+		margin: 10px 0 10px 20px;
+		border-bottom: 1px solid #fff;
+	}
+}
+
+#cart-button {
+	margin: 0 auto;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	.border-radius(7px);
+	.box-shadow(0 2px 5px rgba(0,0,0,0.3));
+}
+
+/*  Append class to the sample button - Example of use
+================================================== */
+
+.cart-module {
+	#cart-button-popup > .init;
+}
